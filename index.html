@@ -1,25 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>New Shop</title>
-    <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/ht
-ml5shiv.js"></script>
-<![endif]--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-    <link rel="stylesheet" href="./CSS/style.scss">
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="./CSS/style.scss">
 </head>
 
 <body>
+
     <header>
         <div class="header__information">
             <div class="header__phone">
-                <p>Help <i class="fa fa-mobile"></i> 01634643124</p>
-            
+                <strong>Help</strong> &ensp;<i class="fas fa-mobile-alt"></i>&ensp;<span>01634643124</span>
+
             </div>
             <div class="header__account">
                 <ul>
@@ -34,7 +36,7 @@ ml5shiv.js"></script>
                 <p>New Shop</p>
                 <nav>
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="#">Woman</a></li>
                         <li><a href="#">Man</a></li>
                         <li><a href="#">Short Code</a></li>
@@ -44,12 +46,41 @@ ml5shiv.js"></script>
 
             </div>
             <div class="header__cart">
-                <p>$0.00 (0 items)<i class="fa fa-shopping-cart"></i></p>
-                <p>Empty Cart</p>
+                <button id="cart">
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                    CART
+                </button>
             </div>
-
         </div>
 
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">CART</h5>
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="cart-row">
+                        <span class="cart-item cart-header cart-column">PRODUCT</span>
+                        <span class="cart-price cart-header cart-column">PRICE</span>
+                        <span class="cart-quantity cart-header cart-column">
+                            AMOUNT</span>
+                    </div>
+
+                    <div class="cart-items">
+
+                    </div>
+                    <div class="cart-total">
+                        <strong class="cart-total-title">TOTAL:</strong>
+                        <span class="cart-total-price">0</span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning close-footer">CLOSE</button>
+                        <button type="button" class="btn btn-primary order">
+                            PAY</button>
+                    </div>
+                </div>
+            </div>
     </header>
     <selection class="carousel">
         <div class="carousel__content"></div>
@@ -85,45 +116,45 @@ ml5shiv.js"></script>
             <div class="product__items">
                 <div class="items__all">
                     <div class="items__menber">
-                        <img src="./img/p13.jpg" alt="">
-                        <div class="items__tilte">
-                            <p>My product is the best</p>
+                        <img class="img-prd" src="./img/GreyHoddie.jpg" alt="">
+                        <div class=" items__tilte">
+                            <h4 class="content-product-h3">Grey Hoddie</h4>
                             <b>XL/XXL/S</b>
-                            <p><del>$100.00</del><span> $70.00</span></p>
-                            <button>Art To Cart</button>
+                            <p><del>$150.00</del><span class="price"> $70.00</span></p>
+                            <button type="button" class="btn btn-cart">Art To Cart</button>
                         </div>
                     </div>
                 </div>
                 <div class="items__all">
                     <div class="items__menber">
-                        <img src="./img/p22.jpg" alt="">
+                        <img class="img-prd" src="./img/GreyTshirt.jpg" alt="">
                         <div class="items__tilte">
-                            <p>My product is the best</p>
+                            <h4 class="content-product-h3">Grey Tshirt</h4>
                             <b>XL/XXL/S</b>
-                            <p><del>$100.00</del><span> $70.00</span></p>
-                            <button>Art To Cart</button>
+                            <p><del>$320.00</del><span class="price"> $240.00</span></p>
+                            <button type="button" class="btn btn-cart">Art To Cart</button>
                         </div>
                     </div>
                 </div>
                 <div class="items__all">
                     <div class="items__menber">
-                        <img src="./img/p9.jpg" alt="">
+                        <img class="img-prd" src="./img/BlackTshirt.jpg" alt="">
                         <div class="items__tilte">
-                            <p>My product is the best</p>
+                            <h4 class="content-product-h3">Black Tshirt</h4>
                             <b>XL/XXL/S</b>
-                            <p><del>$100.00</del><span> $70.00</span></p>
-                            <button>Art To Cart</button>
+                            <p><del>$450.00</del><span class="price"> $270.00</span></p>
+                            <button type="button" class="btn btn-cart">Art To Cart</button>
                         </div>
                     </div>
                 </div>
                 <div class="items__all">
                     <div class="items__menber">
-                        <img src="./img/p16.jpg" alt="">
+                        <img class="img-prd" src="./img/BlackHoddie.jpg" alt="">
                         <div class="items__tilte">
-                            <p>My product is the best</p>
+                            <h4 class="content-product-h3">Black Hoddie</h4>
                             <b>XL/XXL/S</b>
-                            <p><del>$100.00</del><span> $70.00</span></p>
-                            <button>Art To Cart</button>
+                            <p><del>$300.00</del><span class="price"> $170.00</span></p>
+                            <button type="button" class="btn btn-cart">Art To Cart</button>
                         </div>
                     </div>
                 </div>
@@ -131,13 +162,14 @@ ml5shiv.js"></script>
         </div>
     </selection>
     <selection class="trending">
-    
+
         <div class="trending__content">
             <div class="trending__h"></div>
             <p>20% Discount on</p>
             <h2>TRENDING DESIGN</h2>
-            <button>Shop now</button>
-            <button>Quick View</button>
+            <button type="button" class="btn btn-warning">Shop Now</button>
+            <button type="button" class="btn btn-warning">Quick View</button>
+
         </div>
     </selection>
     <selection class="arrivals">
@@ -146,50 +178,50 @@ ml5shiv.js"></script>
             <div class="arrivals__items">
                 <div class="items__all">
                     <div class="items__menber">
-                        <img src="./img/p13.jpg" alt="">
+                        <img class="img-prd" src="./img/GreyHoddieHokk.jpg" alt="">
                         <div class="items__tilte">
-                            <p>My product is the best</p>
+                            <h4 class="content-product-h3">GreyHoddie Hokk</h4>
                             <b>XL/XXL/S</b>
-                            <p><del>$100.00</del><span> $70.00</span></p>
-                            <button>Art To Cart</button>
+                            <p><del>$400.00</del><span class="price"> $360.00</span></p>
+                            <button type="button" class="btn btn-cart">Art To Cart</button>
                         </div>
                     </div>
                 </div>
                 <div class="items__all">
                     <div class="items__menber">
-                        <img src="./img/p22.jpg" alt="">
+                        <img class="img-prd" src="./img/GreyTshirtBlack.jpg" alt="">
                         <div class="items__tilte">
-                            <p>My product is the best</p>
+                            <h4 class="content-product-h3">GreyTshirt Black</h4>
                             <b>XL/XXL/S</b>
-                            <p><del>$100.00</del><span> $70.00</span></p>
-                            <button>Art To Cart</button>
+                            <p><del>$300.00</del><span class="price"> $240.00</span></p>
+                            <button type="button" class="btn btn-cart">Art To Cart</button>
                         </div>
                     </div>
                 </div>
                 <div class="items__all">
                     <div class="items__menber">
-                        <img src="./img/p9.jpg" alt="">
+                        <img class="img-prd" src="./img/BlackTshirtT&T.jpg" alt="">
                         <div class="items__tilte">
-                            <p>My product is the best</p>
+                            <h4 class="content-product-h3">BlackTshirt T&T</h4>
                             <b>XL/XXL/S</b>
-                            <p><del>$100.00</del><span> $70.00</span></p>
-                            <button>Art To Cart</button>
+                            <p><del>$200.00</del><span class="price"> $170.00</span></p>
+                            <button type="button" class="btn btn-cart">Art To Cart</button>
                         </div>
                     </div>
                 </div>
                 <div class="items__all">
                     <div class="items__menber">
-                        <img src="./img/p16.jpg" alt="">
+                        <img class="img-prd" src="./img/BlackHoddieBomber.jpg" alt="">
                         <div class="items__tilte">
-                            <p>My product is the best</p>
+                            <h6 class="content-product-h3">BlackHoddie Bomber</h6>
                             <b>XL/XXL/S</b>
-                            <p><del>$100.00</del><span> $70.00</span></p>
-                            <button>Art To Cart</button>
+                            <p><del>$150.00</del><span class="price"> $100.00</span></p>
+                            <button type="button" class="btn btn-cart">Art To Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
-        
+
         </div>
     </selection>
     <div class="fashion">
@@ -229,7 +261,7 @@ ml5shiv.js"></script>
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="fashion__items">
                     <div class="fashion__menber">
                         <img src="./img/l5.jpg" alt="">
@@ -241,7 +273,7 @@ ml5shiv.js"></script>
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="fashion__items">
                     <div class="fashion__menber">
                         <img src="./img/l4.jpg" alt="">
@@ -253,7 +285,7 @@ ml5shiv.js"></script>
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="fashion__items">
                     <div class="fashion__menber">
                         <img src="./img/l2.jpg" alt="">
@@ -273,46 +305,46 @@ ml5shiv.js"></script>
             <div class="contact__all">
                 <div class="contact__items">
                     <div class="contact__menber">
-                
+
                         <h2>About Us</h2>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque dignissimos minus, debitis
-                                voluptate ad recusandae amet iste beatae illo sunt </p>
-                
+                            voluptate ad recusandae amet iste beatae illo sunt </p>
+
                     </div>
                 </div>
                 <div class="contact__items">
                     <div class="contact__menber ">
-                       
-                            <h2>My Account</h2>
-                            <ul>
-                                <li><a href="#">Check out</a></li>
-                                <li><a href="#">Login</a></li>
-                                <li><a href="#">Create Account</a></li>
-                            </ul>
-                    
+
+                        <h2>My Account</h2>
+                        <ul>
+                            <li><a href="#">Check out</a></li>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Create Account</a></li>
+                        </ul>
+
                     </div>
                 </div>
                 <div class="contact__items">
                     <div class="contact__menber ">
-                       
-                            <h2>Information</h2>
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Product</a></li>
-                                <li><a href="#">Short Code</a></li>
-                                <li><a href="#">Mail Us</a></li>
-                            </ul>
-                    
+
+                        <h2>Information</h2>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Product</a></li>
+                            <li><a href="#">Short Code</a></li>
+                            <li><a href="#">Mail Us</a></li>
+                        </ul>
+
                     </div>
                 </div>
                 <div class="contact__items">
                     <div class="contact__menber ">
-                        
-                            <h2>Contact</h2>
-                            <p><i class="fa fa-map-marker"></i> 296 Võ Thành Trang </p>
-                            <p><i class="fa fa-phone"></i> 01634643124</p>
-                            <p><i class="fa fa-envelope"></i> Dangtrunghieu147@gmail.com</p>
-                        
+
+                        <h2>Contact</h2>
+                        <p><i class="fa fa-map-marker"></i> 296 Võ Thành Trang </p>
+                        <p><i class="fa fa-phone"></i> 01634643124</p>
+                        <p><i class="fa fa-envelope"></i> tranluca90@gmail.com</p>
+
                     </div>
                 </div>
             </div>
@@ -320,23 +352,31 @@ ml5shiv.js"></script>
     </selection>
     <footer>
         <div class="footer__content">
-            <div class="footer__all">
-                <div class="footer__items">
-                    <p><i class="fa fa-copyright"></i>Copyright.NewShop</p>
-                </div>
-                <div class="footer__logo">
-                    <img src="./img/card.png" alt="">
-                </div>
+
+            <div class="footer__items">
+                <i class="fas fa-copyright"></i>&ensp;<span>Copyright.<strong>NEWSHOP</strong></span>
             </div>
+            <div class="footer__logo">
+                <img src="./img/card.png" alt="">
+            </div>
+
         </div>
     </footer>
     <div class="backToTop">
-            <a href="#" class=" cd-top text-replace js-cd-top backToTop__arrow"><i class="fa fa-chevron-circle-up"></i></a>
-        </div>
-
+        <a href="#" class=" cd-top text-replace js-cd-top backToTop__arrow"><i class="fa fa-chevron-circle-up"></i></a>
+    </div>
 
     <script src="./js/util.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/backToTop.js"></script>
+    <script src="/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

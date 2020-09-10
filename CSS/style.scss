@@ -1,5 +1,5 @@
-@import '../../../../codyhouse-framework/main/assets/css/style.scss'; // ⚠️ make sure to import the CodyHouse framework
-@import url('https://fonts.googleapis.com/css?family=Bitter|Open+Sans:400,700'); // custom font
+@import "../../../../codyhouse-framework/main/assets/css/style.scss"; // ⚠️ make sure to import the CodyHouse framework
+@import url("https://fonts.googleapis.com/css?family=Bitter|Open+Sans:400,700"); // custom font
 
 // --------------------------------
 
@@ -13,16 +13,16 @@
   @include defineColorHSL(--cd-color-2, 330, 13%, 42%); // Falcon
   @include defineColorHSL(--cd-color-3, 5, 76%, 62%); // Burnt Sienna
 
-  // back-to-top 
+  // back-to-top
   --cd-back-to-top-size: 40px;
   --cd-back-to-top-margin: 20px;
-  
+
   // font
-  --font-primary: 'Bitter', sans-serif;
-  --font-secondary: 'Open Sans', sans-serif; 
+  --font-primary: "Bitter", sans-serif;
+  --font-secondary: "Open Sans", sans-serif;
 }
 
-@supports(--css: variables) {
+@supports (--css: variables) {
   :root {
     @include breakpoint(md) {
       // back-to-top
@@ -48,16 +48,18 @@
   .cd-top {
     visibility: hidden;
     opacity: 0;
-    transition: opacity .3s, visibility .3s, background-color .3s;
+    transition: opacity 0.3s, visibility 0.3s, background-color 0.3s;
   }
 
-  .cd-top--is-visible { // back-to-top button visible
+  .cd-top--is-visible {
+    // back-to-top button visible
     visibility: visible;
     opacity: 1;
   }
 
-  .cd-top--fade-out { // reduce button opacity if user keeps scrolling
-    opacity: .5;
+  .cd-top--fade-out {
+    // reduce button opacity if user keeps scrolling
+    opacity: 0.5;
   }
 
   .cd-top:hover {
@@ -77,7 +79,7 @@ body {
   background-color: lightness(var(--cd-color-2), 0.76);
   color: var(--cd-color-1);
   font-family: var(--font-secondary);
-  
+
   h1 {
     font-weight: bold;
     color: inherit;
