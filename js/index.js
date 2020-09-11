@@ -16,14 +16,18 @@ close_footer.onclick = function () {
     modal.style.display = "none";
 }
 order.onclick = function () {
-    alert("Thank you for your order payment!!")
+    paySuccess();
+    modal.style.display = "none";
+    var cart_item = document.getElementsByClassName("cart-items")[0];
+    var cart_rows = cart_item.getElementsByClassName("cart-row");
+    cart_item.remove(cart_rows);
+    document.getElementsByClassName("cart-total-price")[0].innerText = "0";
 }
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 }
-
 
 // xóa Cart
 
@@ -125,3 +129,13 @@ function addItemToCart(title, img, price) {
         updateCart();
     })
 }
+
+
+function paySuccess() {
+    Swal.fire(
+        'Success',
+        'Thank you for your order payment!!',
+        'success'
+    )
+}
+

@@ -227,6 +227,7 @@ h5.modal-title {
   background-repeat: no-repeat;
   background-size: cover;
   height: 450px;
+  width: 100%;
 }
 
 /* INTRO */
